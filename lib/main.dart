@@ -71,6 +71,7 @@ class _FirstPageState extends State<FirstPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              //placing textformfield with button in a row with icon.
               Row(
                 children: [
                   Expanded(
@@ -88,9 +89,10 @@ class _FirstPageState extends State<FirstPage> {
                   ),
                 ],
               ),
+              //Listwheelscroll just to try out something diffrent then scrollwheel. with dismissable so you can delete task
+              //by dragging the mouse
               Expanded(
                 child: ListWheelScrollView(
-
                   itemExtent: 60,
                   children: <Widget>[
                     ListView.builder(
@@ -115,6 +117,7 @@ class _FirstPageState extends State<FirstPage> {
                   ],
                 ),
               ),
+              //button to get to the next page
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/secondPage');

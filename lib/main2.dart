@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class SecondRoute extends StatelessWidget {
   const SecondRoute({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,6 +14,7 @@ class SecondRoute extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
+        //button and picture for going back to first page. button behind the picture to get you back
         child: ElevatedButton(
           onPressed: () {
             Navigator.pop(context);  // Pop to go back to the FirstPage
