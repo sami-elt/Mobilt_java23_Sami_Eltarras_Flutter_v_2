@@ -89,13 +89,10 @@ class _FirstPageState extends State<FirstPage> {
                   ),
                 ],
               ),
-              //Listwheelscroll just to try out something diffrent then scrollwheel. with dismissable so you can delete task
-              //by dragging the mouse
+              // Listview with dismissable so you can delete task by dragging the mousessss
               Expanded(
-                child: ListWheelScrollView(
-                  itemExtent: 60,
-                  children: <Widget>[
-                    ListView.builder(
+                child: ListView.builder(
+                      padding: const EdgeInsets.all(12),
                       itemCount: task.length,
                       itemBuilder: (context, index) {
                         return Dismissible(
@@ -110,13 +107,12 @@ class _FirstPageState extends State<FirstPage> {
                           },
                           child: ListTile(
                             title: Text(task[index]),
+
                           ),
                         );
                       },
                     ),
-                  ],
                 ),
-              ),
               //button to get to the next page
               ElevatedButton(
                 onPressed: () {
